@@ -26,7 +26,6 @@ icon.addEventListener('click', function () {
         body.style = 'overflow: hidden; position: fixed; top: 0;'
     }
     header.classList.toggle('show_navbar')
-    // body.classList.toggle('opacity')
 })
 // function for accordion
 for (let i = 0; i < accordion.length; i++) {
