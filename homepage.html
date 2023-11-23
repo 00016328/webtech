@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ANORBANK</title>
+</head>
+
+<body>
+
+    <header class="alt_bg">
+        <div class="container">
+            <nav>
+                <a href="homepage.html" class="logo_link"><img src="resources/logo.svg" alt="" class="logo_img"></a>
+                <ul class="nav_ul">
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="deposits.html">Deposits</a></li>
+                    <li><a href="exchangerate.html">Exchange rates</a></li>
+                    <li><a href="tria.html">Tria card</a></li>
+                </ul>
+                <img src="resources/bars-solid.svg" alt="" class="navbar_icon">
+            </nav>
+            <div class="navbar">
+                <ul class="navbar_ul">
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="deposits.html">Deposits</a></li>
+                    <li><a href="exchangerate.html">Exchange rates</a></li>
+                    <li><a href="tria.html">Tria card</a></li>
+                </ul>
+            </div>
+            <div class="header_content">
+                <div class="header__left">
+                    <h1>TRIA card Three in one</h1>
+                    <p>Order the card online and new opportunities will open up for you</p>
+                    <a href="tria.html" class="header_button">More details</a>
+                </div>
+                <img src="resources/header-right-img.png" alt="" class="header__right">
+            </div>
+        </div>
+    </header>
+
+    <main class="main_homepage">
+        <section>
+            <div class="container tria_section">
+                <div class="tria_section-left">
+                    <h2>TRIA - payment card 3 in 1</h2>
+                    <p>Order the card online and new opportunities will open up for you</p>
+                    <div class="tria_boxes">
+                        <div class="tria_box">
+                            <img src="resources/tria_box_1.svg" alt="">
+                            <p>Cashback 2% and more in the affiliate network</p>
+                        </div>
+                        <div class="tria_box">
+                            <img src="resources/tria_box_2.svg" alt="">
+                            <p>Accrual up to 10% per annum</p>
+                        </div>
+                        <div class="tria_box">
+                            <img src="resources/tria_box_3.svg" alt="">
+                            <p>Overdraft up to 5 million soums</p>
+                        </div>
+                    </div>
+                    <a href="tria.html" class="defoult_button">More about the card</a>
+                </div>
+                <div class="tria_section-right">
+                    <div class="tria_top">
+                        <h2>Safe deposits</h2>
+                        <p>Open profitable deposit on flexible terms</p>
+                        <img src="resources/tria_right_img.png" alt="">
+                    </div>
+                    <a href="deposits.html" class="defoult_button">More about the deposits</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="installments_section">
+                    <h2>Buy in installments</h2>
+                    <p>Real installment plan without interest and overpayments</p>
+                    <div class="installments_boxes">
+                        <div class="installments_box">
+                            <img src="resources/installments_1.png" alt="">
+                            <p>Clothes and shoes</p>
+                        </div>
+                        <div class="installments_box">
+                            <img src="resources/installments_2.png" alt="">
+                            <p>Furniture and household goods</p>
+                        </div>
+                        <div class="installments_box">
+                            <img src="resources/installments_3.png" alt="">
+                            <p>Furniture and household goods</p>
+                        </div>
+                        <div class="installments_box">
+                            <img src="resources/installments_4.png" alt="">
+                            <p>Present</p>
+                        </div>
+                        <div class="installments_box">
+                            <img src="resources/installments_5.png" alt="">
+                            <p>Tourism</p>
+                        </div>
+                        <div class="installments_box">
+                            <img src="resources/installments_6.png" alt="">
+                            <p>Car products</p>
+                        </div>
+                        <div class="installments_box card">
+                            <img src="resources/installments_card.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="goals_section">
+            <div class="container goals_grid">
+                <div class="goals_left">
+                    <h2>Save up for desired goals with ANORBANK</h2>
+                    <p>Profitable deposits with the possibility of partial withdrawal and without losses, in case of
+                        early closing.</p>
+                    <div class="goals_inputs">
+                        <div class="goals_inputs_left">
+                            <div class="goals_inputs_left_sep">
+                                <p>I have in sums:</p>
+                                <div class="input_outcome">
+                                    <input type="number" value="500000" class="number_input number_inputs"
+                                        name="quantity" min="500000" max="1000000000"
+                                        onchange="numberChange(this.value)">
+                                    <div class="range_input_box">
+                                        <div class="range_line_main"></div>
+                                        <div class="range_line_bg"></div>
+                                        <input type="range" min="500000" max="1000000000" value="500000"
+                                            class="range_input" name="range" onchange="rangeChange(this.value)"
+                                            onmousemove="rangeChange(this.value)">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="goals_inputs_left_sep">
+                                <p>For a period of:</p>
+                                <p class="number_inputs months_24">24 months</p>
+                            </div>
+                        </div>
+                        <div class="goals_inputs_right">
+                            <div class="goals_inputs_right_row">
+                                <p>In 24 months i will save up</p>
+                                <p class="goals_inputs_right_descr save"><span>230000</span> sum</p>
+                            </div>
+                            <div class="goals_inputs_right_row">
+                                <p>Average monthly interest amount</p>
+                                <p class="goals_inputs_right_descr amount"><span>9767</span> sum</p>
+                            </div>
+                            <a href="deposits.html" class="defoult_button">More about the deposits</a>
+                        </div>
+                    </div>
+                    <p>The calculation is preliminary. You can find out the personal conditions after completing the
+                        application.</p>
+                </div>
+                <div class="goals_right">
+                    <img src="resources/goals_safe.png" alt="" class="goals_safe">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container section_money">
+                <div class="money_exchange extra_separate">
+                    <h2>Exchange Rates</h2>
+                    <table class="exchange_rate_homepage">
+                        <tr>
+                            <th><i>$</i></th>
+                            <th>
+                                <p>Purchase</p>
+                                <span>12 230,00</span>
+                            </th>
+                            <th>
+                                <p>Sale</p>
+                                <span>12 340,00</span>
+                            </th>
+                            <th>
+                                <p>Central Bank rate</p>
+                                <span>12 280,00</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><i>€</i></th>
+                            <th>
+                                <p>Purchase</p>
+                                <span>12 100,00</span>
+                            </th>
+                            <th>
+                                <p>Sale</p>
+                                <span>13 550,00</span>
+                            </th>
+                            <th>
+                                <p>Central Bank rate</p>
+                                <span>13 327,48</span>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><i>₽</i></th>
+                            <th>
+                                <p>Purchase</p>
+                                <span>110,00</span>
+                            </th>
+                            <th>
+                                <p>Sale</p>
+                                <span>140,00</span>
+                            </th>
+                            <th>
+                                <p>Central Bank rate</p>
+                                <span>137,86</span>
+                            </th>
+                        </tr>
+                    </table>
+                    <h2>Currency exchange rate for legal entities</h2>
+                    <table class="exchange_rate_homepage">
+                        <tr>
+                            <th><i>$</i></th>
+                            <th>
+                                <p>Purchase</p>
+                                <span>12 243,16</span>
+                            </th>
+                            <th>
+                                <p>Sale</p>
+                                <span>12 316,84</span>
+                            </th>
+                            <th>
+                                <p>Central Bank rate</p>
+                                <span>12 280,00</span>
+                            </th>
+                        </tr>
+                    </table>
+                    <a href="exchangerate.html" class="defoult_button">All exchange Rates</a>
+                </div>
+                <div class="money_faq extra_separate">
+                    <div class="money_faq_top">
+                        <h2>FAQ</h2>
+                        <p class="money_faq_minititle">What card limit can I get?</p>
+                        <p>When you fill out the application, the bank will review your credit history based on the
+                            available documents. After that, a bank employee will contact you and tell you about the
+                            available limit and card capabilities."</p>
+                    </div>
+                    <a href="faq.html" class="defoult_button">All FAQ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer_top">
+                <ul class="footer_ul">
+                    <li><a href="contacts.html">Contacts</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="deposits.html">Deposits</a></li>
+                    <li><a href="exchangerate.html">Exchange rates</a></li>
+                    <li><a href="tria.html">Tria card</a></li>
+                </ul>
+            </div>
+            <div class="footer_middle">
+                <div class="footer_middle_box">
+                    <p class="footer_title">DEPOSITS</p>
+                    <ul class="footer_box_ul">
+                        <li><a href="deposits.html">Prime deposit</a></li>
+                        <li><a href="deposits.html">FLY deposit</a></li>
+                        <li><a href="deposits.html">«Go» deposit</a></li>
+                        <li><a href="deposits.html">"SMART 3.0" deposit</a></li>
+                    </ul>
+                </div>
+                <div class="footer_middle_box">
+                    <p class="footer_title">FAQ</p>
+                    <ul class="footer_box_ul">
+                        <li><a href="faq.html">Shoshilmasdan</a></li>
+                        <li><a href="faq.html">Deposit Prime</a></li>
+                        <li><a href="faq.html">Deposit Zamin</a></li>
+                    </ul>
+                </div>
+                <div class="footer_middle_box">
+                    <p class="footer_title">CONTACTS</p>
+                    <ul class="footer_box_ul">
+                        <li><a href="tel:1290">1290</a></li>
+                        <li><a href="tel:+998 55 503-00-00">+998 55 503-00-00</a></li>
+                        <li><a href="mailto:info@anorbank.uz">info@anorbank.uz</a></li>
+                    </ul>
+                </div>
+                <div class="footer_middle_box">
+                    <p class="footer_title">HELPLINE</p>
+                    <ul class="footer_box_ul">
+                        <li><a href="tel:+998712058223">+998 71 231-27-70</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <!-- <p><strong>© ANORBANK 2023</strong></p> -->
+                <p>This website was created to fulfill Web Technology
+                    module’s requirements and does not represent an actual company or service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,991 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Montserrat:wght@400;500;600&family=Playfair+Display&display=swap');
+/* root of variables */
+:root {
+    /* colors */
+    --main_color: #a30041;
+    --alt_bg: #f5f5f7;
+    --text_color: #37363c;
+    --white_color: #fff;
+    --gray_border: #7F7F9B26;
+    /* font settings */
+    --fs_h1: 2.25rem;
+    --fs_h2: 1.5rem;
+    --fs_p: 1.125rem;
+    --f_family: 'Montserrat', sans-serif;
+}
+/* font responsive settings */
+@media (max-width: 991px) {
+    :root {
+        --fs_h1: 1.5rem;
+        --fs_h2: 1.2rem;
+        --fs_p: 1rem;
+    }
+}
+h1 {
+    font-size: var(--fs_h1);
+    color: var(--text_color);
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+h2 {
+    font-size: var(--fs_h2);
+    color: var(--text_color);
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+p {
+    font-size: var(--fs_p);
+    color: var(--text_color);
+    font-weight: 400;
+}
+a {
+    font-size: var(--fs_p);
+    text-decoration: none;
+    color: var(--text_color);
+}
+a:hover {
+    color: var(--main_color);
+}
+
+/* proporties for every selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--f_family);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+/* defoult container settings */
+.container {
+    max-width: 1230px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* ---------- header ---------- */
+.alt_bg {
+    background-color: var(--alt_bg);
+}
+/* nav */
+.logo_img {
+    height: 25px;
+}
+.logo_link {
+    display: flex;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--gray_border);
+}
+.nav_ul {
+    list-style: none;
+    display: flex;
+}
+.nav_ul>li {
+    padding: 0 12px;
+}
+.nav_ul>li>a {
+    display: inline-block;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 2px;
+}
+.selected_li {
+    display: inline-block;
+    color: var(--main_color);
+    border-top: 2px solid var(--main_color);
+    margin-top: 0 !important;
+}
+/* header content */
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.header_button {
+    display: inline-block;
+    color: var(--white_color);
+    background-color: var(--main_color);
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.header_button:hover {
+    color: var(--main_color);
+    background-color: var(--white_color);
+}
+.header__left>p {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.header__left,
+.header__right {
+    width: 50%;
+}
+/* ---------- header END ---------- */
+
+/* ---------- HOMEPAGE --------- */
+@media (min-width: 1025px) {
+    .main_homepage, section {
+        padding: 30px 0;
+    }
+}
+/* section 1 */
+.tria_section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* padding: 0 30px; */
+    gap: 30px;
+}
+.defoult_button {
+    display: inline-block;
+    padding: 15px 24px;
+    font-weight: 600;
+    color: var(--main_color);
+    border-radius: 6px;
+    border: 1px solid var(--main_color);
+}
+.defoult_button:hover {
+    background-color: var(--main_color);
+    color: var(--white_color);
+}
+.tria_section-left,
+.tria_section-right {
+    border-radius: 12px;
+    background-color: var(--alt_bg);
+    padding: 30px;
+}
+.tria_section-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tria_section-right .defoult_button {
+    display: flex;
+    justify-content: center;
+}
+.tria_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px 0 100px;
+}
+.tria_box {
+    padding: 0 5px;
+    width: 33.33%;
+}
+.tria_box img {
+    margin-bottom: 15px;
+
+}
+.tria_section-right img {
+    width: 230px;
+}
+
+/* section 2 */
+.installments_section {
+    border-radius: 12px;
+    background-color: var(--alt_bg);
+    padding: 30px;
+    text-align: center;
+}
+.installments_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 30px;
+}
+.installments_box {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--white_color);
+    border: 1px solid var(--gray_border);
+    border-radius: 11px;
+    margin: 4px;
+    text-align: start;
+}
+.installments_box p {
+    font-size: 14px;
+}
+.installments_box.card {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    grid-row: 1 / 4;
+    grid-column: 1 / 1;
+}
+
+/* section 3 */
+.goals_section {
+    background-color: var(--alt_bg);
+    padding: 60px 0;
+    margin: 30px 0;
+}
+.goals_grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    gap: 0;
+}
+.goals_safe {
+    width: 100%;
+}
+
+/* inputs */
+.goals_inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 0 15px;
+    gap: 30px;
+}
+.goals_inputs_left_sep {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.number_inputs {
+    border-radius: 6px;
+    border: 1px solid var(--gray_border);
+    background-color: var(--white_color);
+    padding: 18px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text_color);
+    width: 50%;
+}
+
+/* input slider */
+.input_outcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 50%;
+}
+.number_input {
+    width: 100%;
+}
+.range_input::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--white_color);
+    border: 5px solid var(--main_color);
+    
+}
+.range_input {
+    width: 100%;
+    appearance: none;
+    height: 5px;
+    background-color: transparent;
+    position: absolute;
+}
+.range_line_bg {
+    height: 5px;
+    background-color: var(--main_color);
+    border-radius: 4px;
+    position: absolute;
+}
+.range_line_main {
+    background-color: #CAD6E5;
+    border-radius: 4px;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+}
+.range_input_box {
+    position: relative;
+    margin-top: -3px;
+}
+/* input slider END */
+
+.number_input:focus-visible {
+    outline: none;
+}
+.goals_inputs_right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.goals_inputs_right_descr {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* section 4 */
+.extra_separate {
+    border-radius: 12px;
+    background-color: var(--alt_bg);
+    padding: 30px;
+}
+.section_money {
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.money_faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.money_faq .defoult_button {
+    display: flex;
+    justify-content: center;
+}
+.money_faq_minititle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+/* exchange rate table */
+.exchange_rate_homepage {
+    width: 100%;
+}
+.exchange_rate_homepage tr th:first-child i {
+    font-size: var(--fs_h1);
+    font-weight: 600;
+    color: #7f7f9b;
+    display: flex;
+    width: 30px;
+}
+.exchange_rate_homepage tr th {
+    text-align: start;
+    padding: 0 12px;
+    color: var(--text_color);
+}
+.exchange_rate_homepage tr {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--gray_border);
+}
+.exchange_rate_homepage tr:last-child {
+    border: none;
+}
+/* ---------- HOMEPAGE END --------- */
+
+/* ---------- navbar --------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -767px;
+    background-color: var(--white_color);
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 61px;
+    transition: all 1s;
+    transform: scaleX(0);
+    z-index: 9;
+}
+header.show_navbar .navbar {
+    right: 0;
+    transition: all 1s;
+    transform: scaleX(1);
+}
+.navbar_ul {
+    list-style: none;
+}
+.navbar_ul>li {
+    border-bottom: 1px solid var(--gray_border);
+}
+.navbar_ul>li>a {
+    display: inline-block;
+    padding: 15px 0;
+}
+.navbar_icon {
+    display: none;
+    height: 25px;
+    transition: all 1s;
+}
+@media (max-width: 767px) {
+    nav {
+        height: 61px;
+    }
+    .nav_ul {
+        display: none;
+    }
+    .navbar_icon {
+        display: block;
+    }
+}
+/* ---------- navbar END --------- */
+
+/* ---------- contacts page --------- */
+.main_contacts, .main_exchangerate {
+    padding: 60px 0;
+}
+.contacts_img {
+    width: 100%;
+}
+.contacts_icon {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacts_box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+.box_links {
+    display: flex;
+    flex-direction: column;
+}
+.contacts_boxes>.contacts_box:first-child .contacts_icon {
+    height: 21px;
+}
+.contacts_row {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: 30px;
+    padding: 12px 0 30px;
+}
+/* ---------- contacts page END --------- */
+
+/* ---------- Exchange rates page --------- */
+.main_exchangerate h1 {
+    margin-bottom: 0;
+}
+.main_exchangerate h2 {
+    margin-bottom: 20px;
+}
+.exchange_rate {
+    width: 100%;
+    margin-bottom: 60px;
+}
+.exchange_rate tr {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    border-bottom: 1px solid var(--gray_border);
+}
+.exchange_rate tr th {
+    padding: 15px 30px;
+    font-weight: 400;
+}
+.exchange_rate tr th:first-child {
+    font-weight: 600;
+}
+.exchange_rate tr:first-child {
+    border: none;
+    background-color: var(--alt_bg);
+    border-radius: 12px;
+}
+.exchange_rate tr:first-child th {
+    font-weight: 500;
+}
+/* mobile */
+.exchange_rate_mobile {
+    display: none;
+    margin-bottom: 60px;
+}
+.rate_row {
+    background-color: var(--alt_bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+}
+.rate_row span {
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.rate_boxes {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.currency_img {
+    width: 25px;
+    margin-right: 10px;
+}
+.rate_row>p {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+.main_exchangerate>.container .exchange_rate_mobile:last-child,
+.main_exchangerate>.container .exchange_rate:nth-child(11) {
+    margin-bottom: 30px;
+}
+/* ---------- Exchange rates page END --------- */
+
+/* ---------- Deposits page END --------- */
+.deposits_section {
+    margin: 30px 0;
+    padding: 30px;
+    background-color: var(--alt_bg);
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: center;
+}
+.deposits_boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 30px;
+}
+.deposits_section_right {
+    width: 100%;
+}
+.deposits_icon {
+    margin-bottom: 15px;
+}
+.deposits_section_left {
+    width: 100%;
+}
+/* ---------- Deposits page END --------- */
+
+/* ---------- Triacard page --------- */
+.triacard_first_section {
+    padding: 60px 0;
+}
+.triacard_first_section h2 {
+    margin-bottom: 60px;
+    text-align: center;
+}
+.triacard_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.triacard_box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.triacard_box_icon {
+    width: 36px;
+}
+
+.triacard_second_section {
+    background-color: var(--alt_bg);
+    padding: 60px 0;
+}
+.triacard_second {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.triacard_section_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.triacard_section_right_img {
+    width: 50%;
+}
+.triacard_second_box {
+    background-color: var(--white_color);
+    padding: 30px;
+    border-radius: 30px 30px 0 30px;
+    margin: 10px 0;
+}
+.tria_faq_section {
+    padding: 60px 0;
+}
+.tria_faq_section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+/* ---------- Triacard page END --------- */
+
+/* ---------- FAQ page --------- */
+.main_faq {
+    padding: 60px 0;
+}
+.accordion {
+    background-color: var(--alt_bg);
+    border-radius: 12px;
+    padding: 15px 0;
+}
+.accordion_header {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    align-items: center;
+}
+.accordion_box {
+    border-bottom: 1px solid var(--gray_border);
+}
+.accordion_box.open .accordion_description{
+    max-height: 300px;
+    transition: max-height 1s;
+}
+.accordion_description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s;
+    transition-delay: 0;
+}
+.accordion .accordion_box:last-child {
+    border: none;
+}
+.accordion_question {
+    font-weight: 600;
+}
+.accordion_description p {
+    padding: 0 30px 30px;
+}
+.accordion_box.open .accordion_question{
+    color: var(--main_color);
+}
+.accordion_question {
+    color: var(--text_color);
+    transition: color 0.8s;
+}
+.accordion_box.open .fa-solid.fa-arrow-up {
+    transform: rotate(-180deg);
+    color: var(--main_color);
+}
+.fa-solid.fa-arrow-up {
+    margin-left: 15px;
+    transform: rotate(0);
+    transition: transform 0.8s;
+}
+.faq_nav_block>li.active {
+    color: var(--main_color);
+    border-bottom: 2px solid var(--main_color);
+}
+.accordion.faq {
+    display: none;
+}
+.accordion.faq.active {
+    display: block;
+}
+.faq_nav_block {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    background-color: var(--alt_bg);
+    border-radius: 12px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: fit-content;
+    gap: 5px;
+}
+.faq_nav_block>li {
+    cursor: pointer;
+    color: var(--text_color);
+    padding: 15px;
+    font-weight: 600;
+}
+.faq_nav_block>li:hover {
+    color: var(--main_color);
+}
+.accordion_description a {
+    color: var(--main_color);
+}
+/* ---------- FAQ page END --------- */
+
+
+/* ---------- Footer --------- */
+footer {
+    background-color: var(--alt_bg);
+}
+.footer_top, .footer_middle {
+    border-bottom: 1px solid var(--gray_border);
+}
+.footer_ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 30px 0;
+}
+.footer_ul>li {
+    padding: 0 12px;
+}
+.footer_ul>li>a {
+    /* display: inline-block; */
+    /* padding: 20px 0; */
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    /* margin-top: 2px; */
+}
+.selected_li {
+    color: var(--main_color);
+}
+
+.footer_middle {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.footer_title {
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+.footer_box_ul {
+    list-style: none;
+}
+.footer_box_ul li {
+    margin-bottom: 15px;
+}
+
+.footer_bottom {
+    padding: 15px 0;
+    /* display: flex;
+    justify-content: space-between; */
+}
+.footer_bottom p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+/* ---------- Footer END --------- */
+
+
+
+
+/* --------- all responsives --------- */
+/* responsive 1024px */
+@media (max-width: 1024px) {
+    .goals_right {
+        display: none;
+    }
+    .goals_grid {
+        grid-template-columns: auto;
+    }
+    .tria_section {
+        display: flex;
+        flex-direction: column;
+    }
+    .tria_section-right img {
+        margin-bottom: 50px;
+        margin-top: 20px;
+        align-self: center;
+    }
+    .tria_top {
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+    }
+    .tria_boxes {
+        margin-bottom: 50px;
+    }
+    section {
+        margin: 30px 0;
+    }
+    .section_money {
+        grid-template-columns: 2fr 1fr;
+    }
+    .main_contacts, .main_exchangerate, .triacard_first_section, .triacard_second_section, .main_faq, .tria_faq_section {
+        padding: 45px 0;
+    }
+    .triacard_first_section h2 {
+        margin-bottom: 45px;
+    }
+    .months_24, .input_outcome {
+        width: 60%;
+    }
+}
+/* responsive 970px */
+@media (max-width: 970px) {
+    .installments_box.card {
+        grid-row: 1 / 4;
+        grid-column: 1 / 4;
+    }
+    .installments_box.card img {
+        width: 100%;
+    }
+    .triacard_second {
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+    .triacard_section_right_img {
+        width: 100%;
+    }
+}
+/* responsive 767px */
+@media (max-width: 767px) {
+    section {
+        margin: 15px 0;
+    }
+    .goals_inputs {
+        grid-template-columns: auto;
+    }
+    .goals_inputs_left {
+        border-bottom: 1px solid var(--gray_border);
+    }
+    .goals_inputs_left_sep {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .number_inputs, .input_outcome {
+        width: 100%;
+    }
+    .section_money {
+        grid-template-columns: auto;
+        gap: 15px;
+    }
+    .money_faq {
+        display: block;
+    }
+    .money_faq .defoult_button {
+        display: inline-block;
+        margin-top: 30px;
+    }
+    .exchange_rate_homepage tr th:first-child {
+        padding: 0;
+    }
+    .exchange_rate_homepage tr th:first-child i {
+        width: 15px;
+    }
+    .tria_section {
+        gap: 15px;
+    }
+    .tria_section-left,
+    .tria_section-right,
+    .installments_section,
+    .money_exchange,
+    .money_faq {
+        padding: 15px;
+    }
+    .goals_section {
+        margin: 15px 0;
+    }
+    .contacts_row {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .main_contacts, .main_exchangerate, .triacard_first_section, .triacard_second_section, .main_faq, .tria_faq_section {
+        padding: 30px 0;
+    }
+    .triacard_first_section h2 {
+        margin-bottom: 30px;
+    }
+    .exchange_rate_mobile {
+        display: block;
+    }
+    .exchange_rate {
+        display: none;
+    }
+    .deposits_section {
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+    }
+    .deposits_section_right {
+        width: 50%;
+    }
+    .deposits_boxes {
+        margin-bottom: 30px;
+    }
+    .triacard_boxes, .triacard_second {
+        grid-template-columns: auto;
+    }
+    .triacard_box {
+        gap: 10px;
+    }
+    .triacard_section_right_img {
+        width: 60%;
+    }
+    .footer_middle {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer_box_ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer_box_ul li {
+        margin-right: 30px;
+    }
+    /* .footer_bottom {
+        flex-direction: column;
+        gap: 10px;
+    } */
+}
+@media (max-width: 600px) {
+    .installments_box.card img {
+        min-width: 100%;
+    }
+    .installments_boxes {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    .installments_box.card {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+        
+    }
+    .installments_box {
+        margin: 7.5px 0;
+    }
+    .header_content {
+        padding: 50px 0;
+        flex-direction: column-reverse;
+        margin: 0;
+        gap: 50px;
+    }
+    .header__left {
+        width: 100%;
+    }
+    .header__right {
+        width: 100%;
+    }
+}
+@media (max-width: 420px) {
+    .tria_boxes {
+        flex-direction: column;
+    }
+    .tria_box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+    .goals_inputs_left_sep {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .deposits_boxes {
+        flex-direction: column;
+    }
+    .deposits_box {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .deposits_section_right {
+        width: 100%;
+    }
+    .deposits_icon {
+        margin-bottom: 0;
+    }
+    .deposits_section {
+        padding: 15px;
+    }
+    .footer_middle {
+        grid-template-columns: auto;
+    }
+}
